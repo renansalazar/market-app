@@ -1,0 +1,2 @@
+export const listarProductosDB = async (connectDB) => await connectDB.query('SELECT * FROM productos;')
+export const crearProductoDB = async (producto, cantidad, connectDB) => await connectDB.execute(`INSERT INTO productos (producto, cantidad) values (?, ?);`, [producto, cantidad])
